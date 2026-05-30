@@ -1,3 +1,6 @@
+import {Button} from "@/components/Button";
+
+
 const navLinks = [
     {href: "#about", label: "About"},
     {href: "#projects", label: "Projects"},
@@ -8,21 +11,30 @@ const navLinks = [
 
 export const Navbar = () => {
     return (
-        <header classNme="fixed top-0 left-0 bg-transparent">
-            <nav>
-                <a>
+        <header className="fixed top-0 left-0 bg-transparent py-5">
+            <nav className="container mx-auto flex items-center justify-between">
+                <a href='#' 
+                className="text-xl font-bold tracking-tight hover:text-primary">
                     PM<span>.</span>
                 </a>
 
                 {/* Desktop Nav */}
-                <div>
-                    <div>
-                        {navLinks.map((link) => (
-                            <a>{link.label}</a>
+                <div className="hidden md:flex items-center gap-1">
+                    <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
+                        {navLinks.map((link, index) => (
+                            <a href={link.href}key={index} className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground round-full hover:bg-surface">
+                                {link.label}</a>
                         ))};
                     </div>
 
                 </div>
+                {/* CTA Button */}
+                <div className="hidden md:block">
+                    <Button size="sm">Contact Me</Button>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <button className="md:hidden p-2 text-foreground"></button>
             </nav>
         </header>);
 };
