@@ -44,7 +44,8 @@ export const Navbar = () => {
                 <button 
                 className="md:hidden p-2 text-foreground cursor-pointer" 
                 onClick={()=> setIsMobileMenuOpen((prev) => !prev)}>
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    {isMobileMenuOpen ? <X size={24} /> : 
+                    <Menu size={24} />}
                 </button>
             </nav>
 

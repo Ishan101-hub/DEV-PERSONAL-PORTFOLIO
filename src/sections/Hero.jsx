@@ -4,10 +4,10 @@ export const Hero = () => {
 
         <div className="absolute inset-0">
             <img 
-            src="/assets/hero.png"
+            src="/src/assets/hero.jpeg"
             alt="Hero img"
             className="w-full h-full object-cover opacity-40"/>
-            <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-backgrounf/80 to-background"/>
+            <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background"/>
         </div>
 
         {/* Green Dots */}
@@ -16,10 +16,10 @@ export const Hero = () => {
                 <div 
                 className="absolute w-1.5 h-1.5 rounded-full opacity-60"
                 style={{
-                    backgrounfColor: "#20B2A6",
-                    left: '${Math.random() * 100}%',
-                    top: '${Math.random() * 100}%',
-                    animation: 'slow-drift 50s'
+                    backgroundColor: "#20b2a6",
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
                 }}
                 />
             ))}
