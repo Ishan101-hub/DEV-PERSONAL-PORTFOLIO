@@ -14,8 +14,8 @@ const navLinks = [
 export const Navbar = () => {
     const [isMobileMenuOpen , setIsMobileMenuOpen] = useState(false);
     return (
-        <header className="fixed top-0 left-0 bg-transparent py-5 z-50">
-            <nav className="container mx-auto flex items-center justify-between">
+        <header className="fixed top-0 left-0 right-0 bg-transparent py-5 z-50">
+            <nav className="container mx-auto flex px-6 items-center justify-between">
                 <a href='#' 
                 className="text-xl font-bold tracking-tight hover:text-primary">
                     PM<span>.</span>
@@ -31,7 +31,7 @@ export const Navbar = () => {
                             className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground round-full hover:bg-surface">
                                 {link.label}
                             </a>
-                        ))};
+                        ))}
                     </div>
 
                 </div>
