@@ -1,6 +1,28 @@
 import {Button} from '@/components/Button';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download,} from 'lucide-react';
+// import { Github, Linkedin, Mail} from 'lucide-react';
 import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
+
+const skills = [
+    "React",
+    "Python",
+    "Java",
+    "Node.js",
+    "HTML",
+    "JavaScript",
+    "TypeScript",
+    "FastAPI",
+    "Firebase",
+    "C++",
+    "PostgreSQL",
+    "MongoDB",
+    "Vercel",
+    "AWS",
+    "Tailwind CSS",
+    "Figma",
+    "Git",
+    "GitHub Actions"
+];
 
 export const Hero = () => {
     return <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -18,6 +40,7 @@ export const Hero = () => {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(30)].map((_, i) => (
                 <div 
+                key={i}
                 className="absolute w-1.5 h-1.5 rounded-full opacity-60"
                 style={{
                     backgroundColor: "#20b2a6",
@@ -33,7 +56,7 @@ export const Hero = () => {
         </div>
 
         {/* Content */}
-        <div className="cintainer mx-auto px-6 pt-32 pb-20 relative z-10">
+        <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Column - Text Content */}
                 <div className="space-y-8">
@@ -46,7 +69,7 @@ export const Hero = () => {
                     {/* Headline */}
                     <div className="space-y-4">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                            Crafting <span className="text-primary glow-text">digital</span> <br/> solutions with <br/><span className="font-serif italic font-normal text white">code and creativity</span>
+                            Crafting <span className="text-primary glow-text">digital</span> <br/> solutions with <br/><span className="font-serif italic font-normal text-white">code and creativity</span>
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                             Hi, I'm Ishan Udawatte - a software engineering undergraduate specializing React, Next.js, and TypeScript. I have a passion for crafting seamless user experiences and building robust web applications. With a strong foundation in software development, I thrive on turning complex problems into elegant solutions. Let's connect and create something amazing together!
@@ -59,20 +82,48 @@ export const Hero = () => {
                         </Button>
                         <AnimatedBorderButton />
                     </div>
-                    {/* Social Links */}
-                    <div className="fles items-center gap-4 animate-fade-in animation-delay-400">
+                    {/* Social Links
+                    <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
                         <span className="text-sm text-muted-foreground"> Follow: </span>
-                        {[{icon: Github, href: "#"},
-                        {icon: Linkedin, href: "#"},
-                        {icon: Mail, href: "#"}
+                        {[
+                            { icon: Github, href: "#"},  
+                            { icon: Linkedin, href: "#"},
+                            { icon: Mail, href: "#"}
                         ].map((social, idx) => (
-                            <a jey={idx} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary trasition-all duration-300"><social.icon />
+                            <a 
+                            key={idx} 
+                            href={social.href} 
+                            className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
+                                {<social.icon className="w-5 h-5"/>}
                             </a>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
                 {/* Right Column - Profile Image */}
-            </div>    
+                <div className="relative animate-fade-in animation-delay-300">
+                    {/* Profile Image */}
+                    <div className="relative max-w-md mx-auto">
+                        <div> 
+                            {/* className="relative glass rounded-3xl p-2 glow-border" */}
+                            <img src="src/assets/profile.png" alt="Ishan Udawatte" className="w-full aspect-[4/5] object-cover rounded-4xl"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                {/*Skills Section  */}
+                <div className="mt-20 animte-fade-in-delay-600 ">
+                    <p className="text-sm text-muted-foreground md-6 text-center">
+                        Technologies I work with</p>
+                    <div className="relative overflow-hidden">
+                        <div className="flex animate-marquee">
+                            {[...skills, ...skills].map((skill, idx) => (
+                                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                                    <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-forground transition-colors">{skill}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
 }

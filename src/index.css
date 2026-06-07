@@ -49,6 +49,12 @@
     text-shadow: 0 0 30px
     color-mix(in srgb, var(--color-primary)50%, transparent)
   }
+
+  .glow-border {
+    box-shadow: 0 0 20px
+    color-mix(in srgb, var(--color-primary) 20%, transparent),
+    inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+  }
 }
 
 @layer utilities {
@@ -81,8 +87,20 @@
       transform: translate(30px, 10px);
     }
   }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
   .animate-fade-in {
     animation : fade-in 0.8s ease-out both;
+  }
+  .animate-marquee {
+    animation: marque 30s liner infinite;
   }
 
   .animation-delay-100{
