@@ -99,8 +99,13 @@
   .animate-fade-in {
     animation : fade-in 0.8s ease-out both;
   }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
   .animate-marquee {
-    animation: marque 30s liner infinite;
+    animation: marquee 30s linear infinite;
   }
 
   .animation-delay-100{
