@@ -6,12 +6,12 @@ import { useState } from "react";
 
 const projects = [
     {
-        title: "AquaSense",
-        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
-        image: "/projects/project.jpg",
-        tags: ["React", "TypeScript", "NodeJS"],
-        link: "#",
-        github: "#",
+        title: "AquaSense - IoT-Based Smart Water Management & Leak Detection System",
+        description: "A full-stack IoT water management platform that enables real-time monitoring of household water consumption, zone-level leak detection, automated valve control, and usage analytics. Built using Flutter, FastAPI, PostgreSQL (Supabase), MQTT, and ESP32 devices, the system processes live sensor data through a cloud-hosted architecture to provide intelligent monitoring, alerts, and water conservation insights.",
+        image: "/projects/aquasense.png",
+        tags: ["Python", "Flutter", "FastAPI", "Supabase", "C++", "HiveMQ Cloud", "PostgreSQL", "ESP32", "YF-S201 Water Flow Sensor", "Solenoid Valve", "Firebase Hosting", "Render", "GitHub"],
+        link: "https://aquasense-sdgp.web.app/",
+        github: "https://github.com/Ishan101-hub/sdgp-se24-aquasense-mobile",
     },
     {
         title: "Fintech Dashboard",
