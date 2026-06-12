@@ -2,6 +2,7 @@ import {Button} from "@/components/Button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react"; 
 
+const LOGO_IMAGE_SRC = "/nav_img.png";
 
 const navLinks = [
     {href: "#about", label: "About"},
@@ -25,11 +26,19 @@ export const Navbar = () => {
     }, []);
     return (
         <header className={`fixed top-0 left-0 right-0  ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5" } z-50`}>
-            <nav className="container mx-auto flex px-6 items-center justify-between">
-                <a href='#' 
+            <nav className="container mx-auto px-6 flex items-center justify-between">
+                {/* <a href='#' 
                 className="text-xl font-bold tracking-tight hover:text-primary">
-                    PM<span>.</span>
-                </a>
+                    PM<span className="text-primary">.</span>
+                </a> */}
+
+                <a href='#' className="hover:opacity-80 transition-opacity">
+                    <img
+                        src={LOGO_IMAGE_SRC}
+                        alt="Ishan Udawatte"
+                        className="h-9 w-auto object-contain"
+                    />
+                </a>    
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-1">
@@ -38,7 +47,7 @@ export const Navbar = () => {
                             <a 
                             href={link.href}
                             key={index} 
-                            className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground round-full hover:bg-surface">
+                            className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface">
                                 {link.label}
                             </a>
                         ))}
@@ -47,7 +56,10 @@ export const Navbar = () => {
                 </div>
                 {/* CTA Button */}
                 <div className="hidden md:block">
-                    <Button size="sm">Contact Me</Button>
+                    <a href="#contact">
+                        <Button size="sm">Contact Me</Button>
+                    </a>
+                    
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -62,7 +74,7 @@ export const Navbar = () => {
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
                 <div className="animate-fade-in md:hidden glass-strong" >
-                <div className="container glass-strong mx-auto px-6 py-6 flex flex-col gap-4">
+                <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                     {navLinks.map((link, index) => (
                             <a 
                             href={link.href}
@@ -72,7 +84,10 @@ export const Navbar = () => {
                                 {link.label}
                             </a>
                         ))}
-                        <Button onClick= {() => setIsMobileMenuOpen(false)} size="sm">Contact Me</Button>
+                        <a href="#contact" onClick= {() => setIsMobileMenuOpen(false)}>
+                            <Button size="sm">Contact Me</Button>
+                        </a>
+                        
                 </div>
             </div>
 

@@ -53,13 +53,13 @@ export const Experience = () => {
 
                 {/* Timeline */}
                 <div className="relative">
-                    <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32, 178, 166, 0.8)]"/>
+                    <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32, 178, 166, 0.8)]"/>
                             {/* Experienced Items  */}
                             <div className="space-y-12">
                                 {experiences.map((exp, idx) => (
                                     <div 
                                     key={idx} 
-                                    className="realtive grid md:grid-cols-2 gap-8 animate-fade-in"
+                                    className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
                                     style={{ animationDelay: `${(idx + 1) * 150}ms`}}>
 
                                         {/* Timeline Dot */}

@@ -1,27 +1,27 @@
 import {Button} from '@/components/Button';
 import { ArrowRight, Download, ChevronDown} from 'lucide-react';
-// import { Github, Linkedin, Mail} from 'lucide-react';
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { IoMailOutline } from "react-icons/io5";
 import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
 
+const CV_FILE_PATH = "@/assets/Ishan_Udawatte_CV.pdf";
+
 const skills = [
-    "React",
-    "Python",
-    "Java",
-    "Node.js",
-    "HTML",
-    "JavaScript",
-    "TypeScript",
-    "FastAPI",
-    "Firebase",
-    "C++",
-    "PostgreSQL",
-    "MongoDB",
-    "Vercel",
-    "AWS",
-    "Tailwind CSS",
-    "Figma",
-    "Git",
-    "GitHub Actions"
+    "Critical Thinking",
+    "Teamwork",
+    "Communication Skills",
+    "Problem Solving",
+    "Leadership",
+    "Time Management",
+    "Adaptability",
+    "Analytical Thinking",
+    "Project Coordination",
+    "Stakeholder Management",
+    "Attention to Detail",
+    "Decision Making",
+    "Event Coordination",
+    "Continuous Learning",
+    "Resilience"
 ];
 
 export const Hero = () => {
@@ -69,28 +69,58 @@ export const Hero = () => {
                     {/* Headline */}
                     <div className="space-y-4">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                            Crafting <span className="text-primary glow-text">digital</span> <br/> solutions with <br/><span className="font-serif italic font-normal text-white">code and creativity</span>
+                            Hi, I'm <span className="text-primary glow-text">Ishan Udawatte</span> <br/>
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                            Hi, I'm Ishan Udawatte - a software engineering undergraduate specializing React, Next.js, and TypeScript. I have a passion for crafting seamless user experiences and building robust web applications. With a strong foundation in software development, I thrive on turning complex problems into elegant solutions. Let's connect and create something amazing together!
-                        </p>
+                              A Software Engineering undergraduate specializing in React, Next.js, and TypeScript. I have a passion for crafting seamless user experiences and translating complex problems into elegant, scalable web applications.
+
+                                </p>
+
+                                <p className="text-muted-foreground">
+                                    Welcome to my digital workspace. Inside, you will find:
+                                </p>
+
+                                {/* list-disc brings the bullets back, pl-5 indents them nicely */}
+                                <ul className="text-muted-foreground list-disc pl-5 space-y-3">
+                                    <li>
+                                    <strong>About Me:</strong> The journey and drive behind my code.
+                                    </li>
+                                    <li>
+                                    <strong>My Skills:</strong> The modern tech stack and tools I use daily.
+                                    </li>
+                                    <li>
+                                    <strong>My Projects:</strong> Real-world applications I've built and shipped.
+                                    </li>
+                                    <li>
+                                    <strong>My Experience:</strong> My professional background and industry growth.
+                                    </li>
+                                    <li>
+                                    <strong>Contact:</strong> Where to reach me so we can build something amazing together.
+                                    </li>
+                                </ul>
                     </div>
                     {/* CTAs */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                        <Button size="lg">
-                            Contact Me <ArrowRight className="w-5 h-5"/>
-                        </Button>
-                        <AnimatedBorderButton>
-                            <Download className="w-5 h-5"/> Download CV
-                        </AnimatedBorderButton>
+                        <a href="#contact">
+                            <Button size="lg">
+                                Contact Me <ArrowRight className="w-5 h-5"/>
+                            </Button>
+                        </a>
+                        
+                        <a href={CV_FILE_PATH} download="Ishan_Udawatte_CV.pdf">
+                            <AnimatedBorderButton>
+                                <Download className="w-5 h-5"/> Download CV
+                            </AnimatedBorderButton>
+                        </a>
+                        
                     </div>
-                    {/* Social Links
+                    {/* Social Links */}
                     <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                        <span className="text-sm text-muted-foreground"> Follow: </span>
+                        <span className="text-sm text-muted-foreground"> Follow me: </span>
                         {[
-                            { icon: Github, href: "#"},  
-                            { icon: Linkedin, href: "#"},
-                            { icon: Mail, href: "#"}
+                            { icon: FaGithub, href: "https://github.com/Ishan101-hub"},  
+                            { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/ishan-udawatte-b7bb50257/"},
+                            { icon: IoMailOutline, href: "mailto:erangaudawatte7@gmail.com"}
                         ].map((social, idx) => (
                             <a 
                             key={idx} 
@@ -99,7 +129,7 @@ export const Hero = () => {
                                 {<social.icon className="w-5 h-5"/>}
                             </a>
                         ))}
-                    </div> */}
+                    </div>
                 </div>
                 {/* Right Column - Profile Image */}
                 <div className="relative animate-fade-in animation-delay-300">
@@ -113,10 +143,12 @@ export const Hero = () => {
                 </div>
             </div>
                 {/*Skills Section  */}
-                <div className="mt-20 animate-fade-in-delay-600 ">
-                    <p className="text-sm text-muted-foreground md-6 text-center">
-                        Technologies I work with</p>
+                <div className="mt-20 animate-fade-in animation-delay-600 ">
+                    <p className="text-sm text-muted-foreground mb-6 text-center">
+                        What I Bring to the Team</p>
                     <div className="relative overflow-hidden">
+                        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10"/>
+                        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10"/>
                         <div className="flex animate-marquee">
                             {[...skills, ...skills].map((skill, idx) => (
                                 <div key={idx} className="flex-shrink-0 px-8 py-4">

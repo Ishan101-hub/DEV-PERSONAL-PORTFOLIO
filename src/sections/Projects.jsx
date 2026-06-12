@@ -1,10 +1,13 @@
 import { ArrowUpRight } from "lucide-react"
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton"
+import { FaGithub } from "react-icons/fa6";
+import { useState } from "react";
+
 
 const projects = [
     {
         title: "AquaSense",
-        Description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
+        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
         image: "/projects/project.jpg",
         tags: ["React", "TypeScript", "NodeJS"],
         link: "#",
@@ -12,7 +15,7 @@ const projects = [
     },
     {
         title: "Fintech Dashboard",
-        Description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
+        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
         image: "/projects/project.jpg",
         tags: ["React", "TypeScript", "NodeJS"],
         link: "#",
@@ -20,7 +23,7 @@ const projects = [
     },
     {
         title: "Fintech Dashboard",
-        Description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
+        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
         image: "/projects/project.jpg",
         tags: ["React", "TypeScript", "NodeJS"],
         link: "#",
@@ -28,15 +31,28 @@ const projects = [
     },
     {
         title: "Fintech Dashboard",
-        Description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
+        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
+        image: "/projects/project.jpg",
+        tags: ["React", "TypeScript", "NodeJS"],
+        link: "#",
+        github: "#",
+    },{
+        title: "Vehicles",
+        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
         image: "/projects/project.jpg",
         tags: ["React", "TypeScript", "NodeJS"],
         link: "#",
         github: "#",
     }
+
 ]
+const DEFAULT_VISIBLE = 4;
 
 export const Projects = () => {
+    const [showAll, setShowAll] = useState(false);
+ 
+    const visibleProjects = showAll ? projects : projects.slice(0, DEFAULT_VISIBLE);
+    const hasMore = projects.length > DEFAULT_VISIBLE;
     return (
         <section id="projects" className="py-32 relative overflow-hidden">
             {/* Bg glows */}
@@ -79,20 +95,21 @@ export const Projects = () => {
                                     <ArrowUpRight className="w-5 h-5"/>
                                 </a>
                                 <a href={project.github} className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
+                                    <FaGithub className="w-5 h-5"/>
                                                                      
                                 </a>
                             </div>
                         </div>
 
                         {/* Content */}
-                        <div className="p=6 space-y-4">
+                        <div className="p-6 space-y-4">
                             <div className="flex items-start justify-between">
                                 <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                                     {project.title}
                                 </h3>
                                 <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary
                                 group-hover:translate-x-1
-                                group-hover:translate-y-1 transition-all"/>
+                                group-hover:-translate-y-1 transition-all"/>
                             </div>
                             <p className="text-muted-foreground text-sm">{project.description}</p>
                             <div className="flex flex-wrap gap-2">
