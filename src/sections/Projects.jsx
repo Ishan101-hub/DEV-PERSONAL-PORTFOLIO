@@ -36,7 +36,8 @@ const projects = [
         tags: ["React", "TypeScript", "NodeJS"],
         link: "#",
         github: "#",
-    },{
+    },
+    {
         title: "Vehicles",
         description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
         image: "/projects/project.jpg",
@@ -46,13 +47,14 @@ const projects = [
     }
 
 ]
-const DEFAULT_VISIBLE = 4;
+const DEFAULT_VISIBLE = 2;
 
 export const Projects = () => {
     const [showAll, setShowAll] = useState(false);
  
     const visibleProjects = showAll ? projects : projects.slice(0, DEFAULT_VISIBLE);
     const hasMore = projects.length > DEFAULT_VISIBLE;
+
     return (
         <section id="projects" className="py-32 relative overflow-hidden">
             {/* Bg glows */}
@@ -76,7 +78,7 @@ export const Projects = () => {
 
              {/* Projects Grid */}
              <div className="grid md:grid-cols-2 gap-8">
-                {projects.map((project, idx) => (
+                {visibleProjects.map((project, idx) => (
                     <div key={idx} 
                     className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
                     style={{animationDelay: `${(idx + 1)*100}ms`}}>
@@ -125,13 +127,25 @@ export const Projects = () => {
                 ))}
              </div>
 
-             {/* View All CTA */}
-             <div className="text-center mt-12 animate-fade-in animation-delay-500">
-                <AnimatedBorderButton>
-                    View All Projects
-                    <ArrowUpRight className="w-5 h-5"/>
-                </AnimatedBorderButton>
-             </div>
+             {/* View All / Collapse CTA */}
+                {hasMore && (
+                    <div className="text-center mt-12 animate-fade-in animation-delay-500">
+                        <AnimatedBorderButton onClick={() => setShowAll((prev) => !prev)}>
+                            {showAll ? "Show Less" : "View All Projects"}
+                            <ArrowUpRight className={`w-5 h-5 transition-transform duration-300 ${showAll ? "rotate-180" : ""}`}/>
+                        </AnimatedBorderButton>
+                    </div>
+)}
+ 
+                {/* Always show the button even when no more projects (in case array has exactly 4) */}
+                {!hasMore && (
+                    <div className="text-center mt-12 animate-fade-in animation-delay-500">
+                        <AnimatedBorderButton>
+                            View All Projects
+                            <ArrowUpRight className="w-5 h-5"/>
+                        </AnimatedBorderButton>
+                    </div>
+                )}
             </div>             
         </section>
     )
