@@ -30,12 +30,12 @@ const projects = [
         github: "https://github.com/Ishan101-hub/homteq-smart-home-ecommerce",
     },
     {
-        title: "Fintech Dashboard",
-        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
-        image: "/projects/project.jpg",
-        tags: ["React", "TypeScript", "NodeJS"],
-        link: "#",
-        github: "#",
+        title: "University Enrollment System",
+        description: "A Java-based university enrollment management system designed to manage students, lecturers, and course coordinators through both a console interface and an interactive Swing GUI. Built using core object-oriented programming principles including inheritance, abstraction, encapsulation, and polymorphism, the application supports enrolment management, advanced searching and sorting, statistics generation, data validation, and graphical data presentation. The system incorporates Maven-based project management and JUnit testing to ensure maintainability, reliability, and scalability.",
+        image: "/projects/unienrollment.jpg",
+        tags: ["Java", "Java Swing", "Apache Maven", "JUnit", "IntelliJ IDEA", "Git"],
+        link: "https://github.com/Ishan101-hub/university-enrollment-system",
+        github: "https://github.com/Ishan101-hub/university-enrollment-system",
     },
     {
         title: "Vehicles",
