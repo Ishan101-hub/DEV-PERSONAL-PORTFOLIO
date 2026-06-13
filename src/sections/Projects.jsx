@@ -22,12 +22,12 @@ const projects = [
         github: "https://github.com/Ishan101-hub/directed-graph-acyclicity-checker",
     },
     {
-        title: "Fintech Dashboard",
-        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
-        image: "/projects/project.jpg",
-        tags: ["React", "TypeScript", "NodeJS"],
-        link: "#",
-        github: "#",
+        title: "Smart Home E-Commerce Platform",
+        description: "A full-stack e-commerce web application developed for browsing, purchasing, and managing smart home products across security, energy, and automation categories. Built using PHP, MySQL, HTML, CSS, and session-based authentication, the platform features a dynamic product catalogue, product detail pages, role-based user access, and a shopping basket system with real-time subtotal and total calculations. The application integrates database-driven inventory management, user authentication workflows, and session persistence to deliver a complete online retail experience.",
+        image: "/projects/homteq.png",
+        tags: ["PHP", "MySQL", "HTML", "CSS", "XAMPP", "Git"],
+        link: "https://github.com/Ishan101-hub/homteq-smart-home-ecommerce",
+        github: "https://github.com/Ishan101-hub/homteq-smart-home-ecommerce",
     },
     {
         title: "Fintech Dashboard",
