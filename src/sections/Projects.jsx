@@ -14,12 +14,12 @@ const projects = [
         github: "https://github.com/Ishan101-hub/sdgp-se24-aquasense-mobile",
     },
     {
-        title: "Fintech Dashboard",
-        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
-        image: "/projects/project.jpg",
-        tags: ["React", "TypeScript", "NodeJS"],
-        link: "#",
-        github: "#",
+        title: "Directed Graph Acyclicity Checker - Graph Algorithms & Cycle Detection Engine",
+        description: "A Java-based graph analysis tool designed to determine whether a directed graph is acyclic (DAG) or contains cycles using two classical graph algorithms: sink elimination and iterative depth-first search (DFS). The application parses large graph datasets into an optimized adjacency-list structure, performs linear-time acyclicity verification in O(V + E) complexity, and identifies concrete cycle paths using three-colour DFS traversal with cycle reconstruction. Built with performance-focused data structures and benchmarked against large-scale graph inputs to validate algorithmic efficiency and scalability.",
+        image: "/projects/acyclicity_checker.png",
+        tags: ["Java", "Algorithms", "Sink Elimination", "DFS", "Graphs Theory", "Git"],
+        link: "https://github.com/Ishan101-hub/directed-graph-acyclicity-checker",
+        github: "https://github.com/Ishan101-hub/directed-graph-acyclicity-checker",
     },
     {
         title: "Fintech Dashboard",
