@@ -16,7 +16,7 @@ const projects = [
     {
         title: "Directed Graph Acyclicity Checker - Graph Algorithms & Cycle Detection Engine",
         description: "A Java-based graph analysis tool designed to determine whether a directed graph is acyclic (DAG) or contains cycles using two classical graph algorithms: sink elimination and iterative depth-first search (DFS). The application parses large graph datasets into an optimized adjacency-list structure, performs linear-time acyclicity verification in O(V + E) complexity, and identifies concrete cycle paths using three-colour DFS traversal with cycle reconstruction. Built with performance-focused data structures and benchmarked against large-scale graph inputs to validate algorithmic efficiency and scalability.",
-        image: "/projects/acyclicity_checker.png",
+        image: "/projects/cycle.png",
         tags: ["Java", "Algorithms", "Sink Elimination", "DFS", "Graphs Theory", "Git"],
         link: "https://github.com/Ishan101-hub/directed-graph-acyclicity-checker",
         github: "https://github.com/Ishan101-hub/directed-graph-acyclicity-checker",
@@ -40,10 +40,26 @@ const projects = [
     {
         title: "Todo App - Full-Stack Task Management Application",
         description: "A full-stack CRUD web application developed using Node.js, Express.js, MongoDB, and EJS templating, enabling users to create, manage, update, and delete tasks through a clean and intuitive interface. The application follows MVC-inspired architecture patterns, integrates MongoDB Atlas for persistent cloud-based storage, and implements asynchronous database operations using Mongoose and async/await workflows to provide efficient task management and data handling.",
-        image: "/projects/project.jpg",
+        image: "/projects/todo.png",
         tags: ["Node.js", "Express.js", "MongoDB Atlas", "Mongoose", "EJS", "CSS", "Git"],
         link: "https://github.com/Ishan101-hub/todo-app-full-stack-task-management-application",
         github: "https://github.com/Ishan101-hub/todo-app-full-stack-task-management-application",
+    },
+    {
+        title: "SDG 14: Life Below Water - Responsive Awareness & Information Platform",
+        description: "A multi-page responsive website developed to promote awareness of UN Sustainable Development Goal 14: Life Below Water, focusing on marine conservation, biodiversity protection, and sustainable ocean resource management. Built using HTML5, CSS3, SVG, and responsive design principles, the platform features interactive content navigation, data visualisation, volunteer programme showcases, feedback systems, multimedia integration, and accessibility-focused layouts, delivering an engaging educational experience across desktop and mobile devices.",
+        image: "/projects/life_below_water.png",
+        tags: ["HTML", "CSS", "JavaScript", "Git"],
+        link: "https://github.com/Ishan101-hub/sdg14-life-below-water",
+        github: "https://github.com/Ishan101-hub/sdg14-life-below-water",
+    },
+    {
+        title: "Traffic Flow Data Analysis - Data Processing & Visualization System",
+        description: "A data-driven traffic analysis system developed using Python, CSV processing, and Tkinter, designed to analyse traffic survey datasets and generate statistical insights from vehicle movement patterns. The application implements robust input validation, file handling, multi-dataset processing, automated report generation, and graphical data visualization, producing sixteen traffic metrics alongside interactive hourly traffic histograms for comparative junction analysis.",
+        image: "/projects/histrogram.png",
+        tags: ["Python", "Tkinter", "Git", "Histrogram"],
+        link: "https://github.com/Ishan101-hub/traffic-flow-data-analysis",
+        github: "https://github.com/Ishan101-hub/traffic-flow-data-analysis",
     }
 
 ]
