@@ -38,12 +38,12 @@ const projects = [
         github: "https://github.com/Ishan101-hub/university-enrollment-system",
     },
     {
-        title: "Vehicles",
-        description: "I am always eager to take on new challenges that push the boundaries of what technology can achieve",
+        title: "Todo App - Full-Stack Task Management Application",
+        description: "A full-stack CRUD web application developed using Node.js, Express.js, MongoDB, and EJS templating, enabling users to create, manage, update, and delete tasks through a clean and intuitive interface. The application follows MVC-inspired architecture patterns, integrates MongoDB Atlas for persistent cloud-based storage, and implements asynchronous database operations using Mongoose and async/await workflows to provide efficient task management and data handling.",
         image: "/projects/project.jpg",
-        tags: ["React", "TypeScript", "NodeJS"],
-        link: "#",
-        github: "#",
+        tags: ["Node.js", "Express.js", "MongoDB Atlas", "Mongoose", "EJS", "CSS", "Git"],
+        link: "https://github.com/Ishan101-hub/todo-app-full-stack-task-management-application",
+        github: "https://github.com/Ishan101-hub/todo-app-full-stack-task-management-application",
     }
 
 ]
