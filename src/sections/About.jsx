@@ -33,7 +33,7 @@ const skillCategories = [
             { name: "MongoDB",    svg: <img src="/src/assets/icons/db/mongodb.svg"    alt="MongoDB"     className="w-8 h-8" /> },
             { name: "Firebase",   svg: <img src="/src/assets/icons/db/firebase.svg"   alt="Firebase"    className="w-8 h-8" /> },
             { name: "Supabase",   svg: <img src="/src/assets/icons/db/supabase.svg"   alt="Supabase"    className="w-8 h-8" /> },
-            { name: "HiveMQ",     svg: <img src="/src/assets/icons/tools/hivemq.svg"     alt="HiveMQ"      className="w-8 h-8" /> },
+            { name: "HiveMQ",     svg: <img src="/src/assets/icons/db/hivemq.svg"     alt="HiveMQ"      className="w-8 h-8" /> },
 
         ],
     },

@@ -30,12 +30,12 @@ const projects = [
         github: "https://github.com/Ishan101-hub/homteq-smart-home-ecommerce",
     },
     {
-        title: "University Enrollment System",
-        description: "A Java-based university enrollment management system designed to manage students, lecturers, and course coordinators through both a console interface and an interactive Swing GUI. Built using core object-oriented programming principles including inheritance, abstraction, encapsulation, and polymorphism, the application supports enrolment management, advanced searching and sorting, statistics generation, data validation, and graphical data presentation. The system incorporates Maven-based project management and JUnit testing to ensure maintainability, reliability, and scalability.",
-        image: "/projects/unienrollment.jpg",
-        tags: ["Java", "Java Swing", "Apache Maven", "JUnit", "IntelliJ IDEA", "Git"],
-        link: "https://github.com/Ishan101-hub/university-enrollment-system",
-        github: "https://github.com/Ishan101-hub/university-enrollment-system",
+        title: "AquaSense Product Showcase Platform",
+        description: "A responsive product showcase website developed to present the AquaSense smart water management ecosystem, highlighting its IoT infrastructure, real-time monitoring capabilities, leakage detection features, analytics dashboard, and sustainability impact. Built using HTML, CSS, JavaScript, Node.js, and Express, the platform combines interactive user experiences, animated content sections, team showcases, product demonstrations, and integrated feedback collection to communicate the project's technical capabilities and vision to stakeholders, users, and potential partners.",
+        image: "/projects/landing.png",
+        tags: ["HTML", "CSS", "Node.js", "Express.js", "JavaScript", "Bootstrap", "Resend API", "Render", "Git"],
+        link: "https://www.aquasense.lk/",
+        github: "https://github.com/Ishan101-hub/sdgp-se-24-aqua-sense--landing-page",
     },
     {
         title: "Todo App - Full-Stack Task Management Application",
@@ -44,6 +44,14 @@ const projects = [
         tags: ["Node.js", "Express.js", "MongoDB Atlas", "Mongoose", "EJS", "CSS", "Git"],
         link: "https://github.com/Ishan101-hub/todo-app-full-stack-task-management-application",
         github: "https://github.com/Ishan101-hub/todo-app-full-stack-task-management-application",
+    },
+    {
+        title: "University Enrollment System",
+        description: "A Java-based university enrollment management system designed to manage students, lecturers, and course coordinators through both a console interface and an interactive Swing GUI. Built using core object-oriented programming principles including inheritance, abstraction, encapsulation, and polymorphism, the application supports enrolment management, advanced searching and sorting, statistics generation, data validation, and graphical data presentation. The system incorporates Maven-based project management and JUnit testing to ensure maintainability, reliability, and scalability.",
+        image: "/projects/unienrollment.jpg",
+        tags: ["Java", "Java Swing", "Apache Maven", "JUnit", "IntelliJ IDEA", "Git"],
+        link: "https://github.com/Ishan101-hub/university-enrollment-system",
+        github: "https://github.com/Ishan101-hub/university-enrollment-system",
     },
     {
         title: "SDG 14: Life Below Water - Responsive Awareness & Information Platform",
